@@ -6,6 +6,7 @@ let firstCard, secondCard;
 let score;
 
 function flipCard() {
+    
     if (lockBoard) return;
     if(this === firstCard) return;
 
@@ -38,7 +39,7 @@ function checkForMatch() {
 }
 
 function disableCards() {
-    
+
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     score = score+1;
